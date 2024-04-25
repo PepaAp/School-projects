@@ -13,6 +13,7 @@ body {
     border: none;
     display: block;
     margin: auto;
+    margin-top: 35px;
     position: relative;
     border: white 2px solid;
     background: #0e162a;
@@ -63,4 +64,5 @@ h1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 40px;
     color: white;
+    margin-bottom: 150px;
 }
