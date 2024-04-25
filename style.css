@@ -17,7 +17,7 @@ body {
     position: relative;
     border: white 2px solid;
     background: #0e162a;
-    font-size: 40px;
+    font-size: 20px;
     transition: background-color 0.5s ease;
 }
 
@@ -36,7 +36,7 @@ body {
     width: calc(100% + 4px);
     height:  calc(100% + 4px);
     filter: blur(8px);
-    animation: glowing 20s linear infinite;
+    animation: glowing 40s linear infinite;
     transition: opacity .3s ease-in-out;
     border-radius: 10px;
   }
