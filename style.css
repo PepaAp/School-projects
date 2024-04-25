@@ -6,26 +6,55 @@ body {
 
 .but-ani {
     text-align: center;
-    padding: 20 px;
+    padding: 30 px;
+    width: 300px;
+    height: 40px;
     border-radius: 15px;
     border: none;
     display: block;
     margin: auto;
     position: relative;
-    color: white;
-    background: linear-gradient(45deg, #00ccff, #14213D, #d400d4);
-    font-size: 25px;
+    border: white 2px solid;
+    background: #0e162a;
+    font-size: 20px;
+    transition: background-color 0.5s ease;
 }
 
-.but-ani:nth-child(2) {
-    filter: blur(10px);
-    transition: 0.2s;
+.but-ani:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #FF0000, #FF7300, #FFFB00, #48FF00,
+      #00FFD5, #002BFF, #FF00C8, #FF0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height:  calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+  }
+
+  @keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+  }
+
+a {
+    text-decoration: none;
+    color: white;
 }
 
 .but-ani:hover {
-    color: rgb(255, 255, 255);
+    background: #1d2843;
     border-radius: 10px;
-    transition: 0.2s;
+    transition: 0.5;
 }
 
 h1 {
