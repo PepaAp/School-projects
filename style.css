@@ -50,6 +50,9 @@ body {
 a {
     text-decoration: none;
     color: white;
+    width: 300px;
+    height: 40px;
+    padding: 30 px;
 }
 
 .but-ani:hover {
