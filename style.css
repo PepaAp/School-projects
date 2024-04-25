@@ -1,0 +1,37 @@
+body {
+    background-color: #14213D;    
+    margin: 0;
+    padding: 0;
+}
+
+.but-ani {
+    text-align: center;
+    padding: 20 px;
+    border-radius: 15px;
+    border: none;
+    display: block;
+    margin: auto;
+    position: relative;
+    color: white;
+    background: linear-gradient(45deg, #00ccff, #14213D, #d400d4);
+    font-size: 25px;
+}
+
+.but-ani:nth-child(2) {
+    filter: blur(10px);
+    transition: 0.2s;
+}
+
+.but-ani:hover {
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+h1 {
+    padding: 20px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    color: white;
+}
