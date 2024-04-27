@@ -4,8 +4,30 @@ body {
   padding: 0;
 }
 
+h1 {
+  padding: 20px;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 40px;
+  color: white;
+  margin-bottom: 150px;
+}
+
+footer {
+color: white;
+text-align: center;
+padding: 40px;
+margin-top: 200px;
+}
+
+
 button {
 color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
 .but-ani {
@@ -57,30 +79,9 @@ filter: blur(0.3);
   100% {background-position: 0 0;}
 }
 
-a {
-  text-decoration: none;
-  color: white;
-}
-
 .but-ani:hover {
   background: #1d2843;
   border-radius: 10px;
   transition: 0.5;
   cursor: pointer;
-}
-
-h1 {
-  padding: 20px;
-  text-align: center;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 40px;
-  color: white;
-  margin-bottom: 150px;
-}
-
-footer {
-color: white;
-text-align: center;
-padding: 40px;
-margin-top: 200px;
 }

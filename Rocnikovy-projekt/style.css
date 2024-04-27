@@ -1,0 +1,95 @@
+h1 {
+    text-align: center;
+    color: white;
+    padding-top: 160px;
+    padding-bottom: 160px;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+footer {
+    margin: auto;
+    text-align: center;
+    padding: 50px;
+    background-color: #34bfff;
+    color: white;  
+}
+
+.navbar {
+    top: 0;
+    position: absolute;
+    z-index: 4;
+    background-color: transparent;
+    color: white;
+}
+
+.dropdown:hover .nav-link {
+    text-decoration: underline;
+    color: white;
+}
+
+.dropdown:hover .dropdown-menu {
+    color: white;
+    display: block;
+    background-color: #00a595;
+    animation: alternate 0.5s;
+}
+
+.dropdown-item {
+    color: white;
+}
+
+.dropdown-item:hover {
+    transition: 0.5s;
+}
+
+.nav-item:hover .nav-link {
+    color: white;
+    text-decoration: underline;
+    transition: 0.5s;
+}
+
+
+.nav-link {
+    color: white;
+    color: white !important;
+}
+
+
+.container {
+    color: white;
+}
+
+.photo-text {
+    color: white;
+    text-align: center;
+    margin: auto;
+    max-height: 370px;
+    z-index: 3;
+    position: relative; 
+    font-size: 80px;
+}
+
+.box {
+    position: absolute;
+    background-color: #00a595;
+    top: 0;
+    height: 370px;
+    width: 100%;
+    opacity: 0.3;
+    z-index: 2;
+}
+
+.bg-photo {
+    background-image: url('./imgs/IMG20230711085429.jpg');
+    background-size: cover;
+    z-index: 1;
+    top: 0;
+    height: 370px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    position: absolute;
+}
+
