@@ -5,6 +5,7 @@ h1 {
     padding-bottom: 160px;
     font-family: inherit;
     font-weight: 600;
+    text-transform: uppercase;
 }
 
 footer {
@@ -32,32 +33,19 @@ footer {
     color: white;
     display: block;
     background-color: #00a595;
-    animation: alternate 0.5s;
 }
 
 .dropdown-item {
     color: white;
 }
 
-.dropdown-item:hover {
-    transition: 0.5s;
-}
-
 .nav-item:hover .nav-link {
-    color: white;
     text-decoration: underline;
-    transition: 0.5s;
 }
-
 
 .nav-link {
-    color: white;
+    font-size: larger;
     color: white !important;
-}
-
-
-.container {
-    color: white;
 }
 
 .photo-text {
@@ -81,7 +69,6 @@ footer {
 }
 
 .bg-photo {
-    background-image: url('./imgs/IMG20230711085429.jpg');
     background-size: cover;
     z-index: 1;
     top: 0;
