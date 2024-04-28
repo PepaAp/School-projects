@@ -32,7 +32,7 @@ footer {
 .dropdown:hover .dropdown-menu {
     color: white;
     display: block;
-    background-color: #00a595;
+    background-color: #3c83c6;
 }
 
 .dropdown-item {
@@ -42,7 +42,7 @@ footer {
 .dropdown-item:hover {
     text-decoration: underline;
     color: white;
-    background-color: #00a595;
+    background-color: #2c6eac;
 }
 
 .nav-item:hover .nav-link {
@@ -70,7 +70,7 @@ footer {
     top: 0;
     height: 370px;
     width: 100%;
-    opacity: 0.3;
+    opacity: 0.7;
     z-index: 2;
 }
 
