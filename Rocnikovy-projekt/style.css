@@ -86,3 +86,6 @@ footer {
     position: absolute;
 }
 
+.c-dec {
+    text-decoration: none !important;
+}
