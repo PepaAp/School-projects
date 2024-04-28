@@ -39,6 +39,12 @@ footer {
     color: white;
 }
 
+.dropdown-item:hover {
+    text-decoration: underline;
+    color: white;
+    background-color: #00a595;
+}
+
 .nav-item:hover .nav-link {
     text-decoration: underline;
 }

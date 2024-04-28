@@ -14,15 +14,15 @@ h1 {
 }
 
 footer {
-color: white;
-text-align: center;
-padding: 40px;
-margin-top: 200px;
+  color: white;
+  text-align: center;
+  padding: 40px;
+  margin-top: 200px;
 }
 
 
 button {
-color: white;
+  color: white;
 }
 
 a {
@@ -50,7 +50,7 @@ a {
 .but-ani:active {
   transform: scale(0.99);
   transition: 0.3s ease;
-filter: blur(0.3);
+  filter: blur(0.3);
 }
 
 .but-ani:before {
