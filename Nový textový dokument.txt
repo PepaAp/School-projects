@@ -1,0 +1,50 @@
+#include <Arduino.h>
+
+#define numLeds 3
+#define numStates 5
+#define cas 1000
+int leds[] = {4, 3, 2};
+bool states[numStates][numLeds] = {
+  {1, 0, 0},
+  {1, 1, 0},
+  {0, 0, 1},
+  {0, 1, 0},
+  {1, 0, 0}
+};
+
+void semafor() {
+  for (int y = 0; y < numStates; y++) {
+    for (int x = 0; x < numLeds; x++) {
+      digitalWrite(leds[x], states[y][x]);
+    }
+    delay(cas);
+    Serial.print("Stav semaforu: ");
+    Serial.println(y);
+  }
+}
+
+void starter() {
+
+}
+
+void setup() {
+  for (int i = 0; i < numLeds; i++){
+    pinMode(leds[i], OUTPUT);
+  }
+  Serial.begin(9600);
+  
+}
+
+void loop() {
+  digitalWrite(4, HIGH);
+  //semafor();
+  if(Serial.available())  {
+    String hodnota = Serial.readString();
+    //int hodnota = Serial.parseInt();
+    
+    if (hodnota = "s") {
+      Serial.print("Car coming!\n");
+      semafor();
+    }
+  }
+}
