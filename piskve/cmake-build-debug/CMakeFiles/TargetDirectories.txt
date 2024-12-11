@@ -1,0 +1,3 @@
+C:/studenti/IT1P1/priklad_51/cmake-build-debug/CMakeFiles/priklad_51.dir
+C:/studenti/IT1P1/priklad_51/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/studenti/IT1P1/priklad_51/cmake-build-debug/CMakeFiles/rebuild_cache.dir
