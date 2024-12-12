@@ -29,7 +29,7 @@ void turn (char table[SIZE][SIZE], char player) {
     };
     x--;
     y--;
-    if (countChar != 0 || x<0 || x>SIZE-1 || y<0|| y>SIZE-1) {              //kontroluje zda je vyber pole validni
+    if (countChar != 0 || x<0 || x>SIZE-1 || y<0|| y>SIZE-1 || table[x][y] != ' ') {              //kontroluje zda je vyber pole validni
         printf("Invalid input, try again.\n");
         turn(table, player);
     } else {
