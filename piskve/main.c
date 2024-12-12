@@ -95,19 +95,19 @@ int diagonal (char table[SIZE][SIZE]) {
         countX = 0;
         countO = 0;
         for (int j = 0; j < SIZE; j++) {        //meni sloupce
-            if (table [j][i] != ' ') {
-                if (table[j][i] == 'x') {
+            if (table [j][i] != ' ') {            //prochazi pouze polecka kde neco je
+                if (table[j][i] == 'x') {        //pokud najde x tak si ho zapise a vznuluje y
                     countO = 0;
                     countX++;
-                    for (int k = 1; k < WIN; k++) {
-                        if (table[j + k][i + k] == 'x') {
+                    for (int k = 1; k < WIN; k++) {            //opakuje dokud nenajde dost x pro vzhru
+                        if (table[j + k][i + k] == 'x') {            // posunuje se diagonalne ve smeru do prava nahoru pokud najde x picte k poctu 
                             countX++;
-                            if (countX == WIN) {
+                            if (countX == WIN) {                //pokud nasel dost x pro vzhru vzpise posledni tah a ukonci hru
                                 printTable(table);
                                 printf("x wins");
                                 return 1;
                             }
-                        } else if (table[j + k][i - k] == 'x') {
+                        } else if (table[j + k][i - k] == 'x') {            //posunuje do leva dolu
                             countX++;
                             if (countX == WIN) {
                                 printTable(table);
@@ -115,10 +115,10 @@ int diagonal (char table[SIZE][SIZE]) {
                                 return 1;
                             }
                         } else {
-                            countX = 0;
+                            countX = 0;            // pokud jina moznost vznuluje x
                         }
                     }
-                } else if (table[j][i] == 'o') {
+                } else if (table[j][i] == 'o') {        //to same co u x ale u y
                     countX = 0;
                     countO++;
                     for (int k = 1; k < WIN; k++) {
@@ -127,6 +127,13 @@ int diagonal (char table[SIZE][SIZE]) {
                             if (countO == WIN) {
                                 printTable(table);
                                 printf("o wins");
+                                return 1;
+                            }
+                        } else if (table[j + k][i - k] == 'x') {           
+                            countX++;
+                            if (countX == WIN) {
+                                printTable(table);
+                                printf("x wins");
                                 return 1;
                             }
                         } else {
@@ -142,26 +149,27 @@ int diagonal (char table[SIZE][SIZE]) {
 }
 
 int winChecker (char table[SIZE][SIZE]) {
-    if (row(table) == 1 || column(table) == 1 || diagonal(table) == 1) {
+    if (row(table) == 1 || column(table) == 1 || diagonal(table) == 1) {                //pokud jaka koliv moznost zaznamenala win vrati jedincku
         return 1;
     } else {
         return 0;
     }
 }
+
 int main(void) {
-        char table[SIZE][SIZE];
+        char table[SIZE][SIZE];            // vytvori pole
         for (int i = 0; i < SIZE; i++) {
-        for (int j = 0; j < SIZE; j++) {
-            table[i][j] = ' ';
-        }
+            for (int j = 0; j < SIZE; j++) {     //naplni pole
+                table[i][j] = ' ';
+            }
     }
 
-    char player = 'x';
-    while (winChecker(table) != 1) {
+    char player = 'x';                        //nastavi default hrace na x
+    while (winChecker(table) != 1) {            //opakuje proces dokud  nevrati winchecker 1
         printTable(table);
         turn(table, player);
-        player = (player == 'x') ? 'o' : 'x';
+        player = (player == 'x') ? 'o' : 'x';        //meni hrace
     }
 
-    return 0;
+    return 0;            
 }
