@@ -1,13 +1,15 @@
 <!doctype html>
-<html lang="cz">
+<html lang="cs">
     <head>
-        <title>Atlas Zemí</title>
+        <title>Atlas zemí</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+
+        <link rel="stylesheet" href="style.css">
 
         <!-- Bootstrap CSS v5.2.1 -->
         <link
@@ -19,10 +21,10 @@
     </head>
 
     <body>
-        <header class="p-3 bg-info">
-            <h1 class="display-3 text-center text-white">Atlas Zemí</h1>
-            <div class="mx-auto">
-                <select id="continent">
+        <header class="bg-info p-4 mb-5">
+            <h1 class="display-3 text-white text-center">Atlas zemí</h1>
+            <div  class="mx-auto" style="width: 100px;" id="selector">
+                <select id="continent" class="text-center">
                     <option value="europe">Evropa</option>
                     <option value="asia">Asie</option>
                     <option value="africa">Afrika</option>
@@ -32,24 +34,44 @@
                 </select>
             </div>
         </header>
-        <main class="container-fluid m-2">
-            <div class="row" id="listCountries">
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                    <div class="card">
-                        <img src="https://flagcdn.com/w320/tz.png" alt="" class="card-img-top">
-                        <div class="card-body">
-                            <h4 class="card-title">stat</h4>
-                            <p class="card-text">hl mesto</p>
-                            <a href="" class="btn btn-info card-link">info</a>
-                            <!-- dalsi info -->
-                        </div>
+        <main class="container-fluid" >
+        <div class="row" id="listCountries">
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6" >                
+                <div class="card">
+                    <img class="card-img-top" src="https://flagcdn.com/w320/bw.png" alt="Vlajka">
+                    <div class="card-body">
+                      <h4 class="card-title">Název státu</h4>
+                      <p class="card-text">Hlavní město</p>
+                      <a href="#" class="btn btn-info card-link">Informace</a>
                     </div>
                 </div>
             </div>
+        </div>
         </main>
-        <footer class="text-center bg-dark p-2 m-2">
-            <p class="text-white">Josef Aron 2025 IT2</p>
+        <footer>
         </footer>
+
+        <div class="modal" id="windowCountry">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+            <div class="modal-header" id="modal-header-content">
+                <h4 class="modal-title">Modal Heading</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body" id="modal-body-content">
+                Modal body..
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+
+            </div>
+        </div>
+        </div>
+
         <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -62,7 +84,6 @@
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"
         ></script>
-
         <script src="atlas.js"></script>
     </body>
 </html>
