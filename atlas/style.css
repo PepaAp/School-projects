@@ -1,3 +1,45 @@
 select {
     border: 10px violet;
 }
+
+body {
+    background-color: rgb(187, 236, 255) !important;
+}
+
+#map {
+    width: 500px;
+    height: 300px;
+    margin: auto;
+}
+
+.modal {
+    --bs-modal-width: 700px !important;
+}
+
+.card-img-top{
+    outline: 1px solid lightgray;
+    max-height: 200px !important;
+}
+
+.card {
+    margin-top: 1rem;
+    --bs-card-height: 350px !important;
+    border: none;
+}
+
+#selector {
+    width: 200px !important;
+    margin: 1rem auto;
+}
+
+#continent {
+    width: 100%;
+    padding: 0.3rem .3rem;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: #2c3e50;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
