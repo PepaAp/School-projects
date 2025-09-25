@@ -1,4 +1,5 @@
 from colorama import Fore, Style
+import time
 
 def camelGreet():
     """This function prints what this application does."""
@@ -7,22 +8,105 @@ def camelGreet():
     print(Fore.WHITE + "----------------------------------------------" + Style.RESET_ALL)
 
 def printErr():
+    """This function prints error message."""
     print(Fore.RED + "Wrong input, try again." + Style.RESET_ALL)
 
+hairColor = ""
+hairLen = ""
+eyecolor = ""
+body = ""
+beard = ""
+age = 0
+sex = ""
+height = 0
+
+def calculate (sex, be, bo, ec, hl, hc, h, a):
+    """This function calculates the camel worth based on input data."""
+    points = 0
+    if ec == "blue":
+        points += 5
+    elif ec == "green":
+        points += 10
+    elif ec == "mixed":
+        points += 15
+    else:
+        points += 2
+
+    if be == "none":
+        points += 10
+    elif be == "small":
+        points += 12
+    elif be == "medium":
+        points += 15
+    elif be == "full":
+        points += 10
+
+    if bo == "slim":
+        points += 10
+    elif bo == "fat":
+        points += 6
+    else:
+        points += 20
+
+    if hl == "bald":
+        points += 5
+    elif hl == "long":
+        points += 3
+    else:
+        points += 10
+    
+    if hc == "brown":
+        points +=8
+    elif hc == "black":
+        points +=10
+    elif hc == "blond":
+        points += 6
+    else:
+        points += 2
+
+    if h <= 110:
+        points += 2
+    elif h <= 140:
+        points +=5
+    elif h<=160:
+        points +=15
+    elif h <= 180:
+        points +=25
+    elif h<= 190:
+        points +=32
+    elif h <= 209:
+        points+=28
+    elif h >= 210:
+        points +=20
+        
+    if a <= 10:
+        points += 8
+    elif a <= 15:
+        points += 10
+    elif a <= 20:
+        points += 20
+    elif a <= 30:
+        points += 25
+    elif a <= 40:
+        points += 15
+    elif a <= 50:
+        points += 10
+    elif a <= 60:
+        points += 5
+    else:  
+        points += 2
+    
+    if sex != "male":
+        points == points/2
+    return points
+
 def getData():
-    sex = ""
-    age = 0
-    beard = ""
+    """This function gets the data from user."""
     beardOpt = ["none", "small", "medium", "full"]
-    body = ""
     bodyOpt = ["slim", "fat", "muscle", "ripped"]
-    eyecolor = ""
     eyecolorOpt = ["blue", "brown", "green", "mixed"]    
-    hairLen = ""
     hairLenOpt = ["bald", "short", "medium", "long"]
-    hairColor = ""
     hairColorOpt = ["brown", "black", "blond", "other"]
-    height = 0
     
     while True:
         try:
@@ -89,7 +173,19 @@ def getData():
             printErr()
 
     print(Fore.GREEN + "\nData collected successfully!")
-    print(f"Age: {age}, Sex: {sex}, Beard: {beard if sex == 'male' else 'N/A'}" + Style.RESET_ALL)
+    print(Fore.BLUE + "Calculating", end="")
+    for i in range(0, 20):
+        print(".", end="")
+        time.sleep(0.05)
+    print("")
+    camels = calculate(sex, beard, body, eyecolor, hairLen, hairColor, height, age)
+    printResults(camels)
+
+
+    
+def printResults(x):
+    """This function prints the results."""
+    print(Fore.YELLOW + f"You are worth {x} camels.")
 
 camelGreet()
 getData()
