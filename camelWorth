@@ -1,0 +1,95 @@
+from colorama import Fore, Style
+
+def camelGreet():
+    """This function prints what this application does."""
+    print(Fore.YELLOW + 'CAMEL WORTH CALCULATOR')
+    print(Fore.CYAN + "Find out how many camels you are worth!")
+    print(Fore.WHITE + "----------------------------------------------" + Style.RESET_ALL)
+
+def printErr():
+    print(Fore.RED + "Wrong input, try again." + Style.RESET_ALL)
+
+def getData():
+    sex = ""
+    age = 0
+    beard = ""
+    beardOpt = ["none", "small", "medium", "full"]
+    body = ""
+    bodyOpt = ["slim", "fat", "muscle", "ripped"]
+    eyecolor = ""
+    eyecolorOpt = ["blue", "brown", "green", "mixed"]    
+    hairLen = ""
+    hairLenOpt = ["bald", "short", "medium", "long"]
+    hairColor = ""
+    hairColorOpt = ["brown", "black", "blond", "other"]
+    height = 0
+    
+    while True:
+        try:
+            age = int(input("Enter your age: "))
+            if 1 < age < 100:
+                break
+            else:
+                printErr()
+        except ValueError:
+            printErr()
+
+    while True:
+        sex = input("male or female? ").lower()
+        if sex in ["male", "female"]:
+            break
+        else:
+            printErr()
+    
+    if sex == "male":
+        while True:
+            beard = input(f"beard {beardOpt}: ").lower()
+            if beard in beardOpt:
+                break
+            else:
+                printErr()
+
+    while True:
+        body = input(f"body {bodyOpt}: ").lower()
+        if body in bodyOpt:
+            break
+        else:
+            printErr()
+
+    while True:
+        eyecolor = input(f"eye color {eyecolorOpt}: ").lower()
+        if eyecolor in eyecolorOpt:
+            break
+        else:
+            printErr()
+
+    while True:
+        hairLen = input(f"hair length {hairLenOpt}: ").lower()
+        if hairLen in hairLenOpt:
+            break
+        else:
+            printErr()
+
+    if hairLen != "bald":
+        while True:
+            hairColor = input(f"hair color {hairColorOpt}: ").lower()
+            if hairColor in hairColorOpt:
+                break
+            else:
+                printErr()
+
+    while True:
+        try:
+            height = int(input("Enter your height: "))
+            if 50 < height < 280:
+                break
+            else:
+                printErr()
+        except ValueError:
+            printErr()
+
+    print(Fore.GREEN + "\nData collected successfully!")
+    print(f"Age: {age}, Sex: {sex}, Beard: {beard if sex == 'male' else 'N/A'}" + Style.RESET_ALL)
+
+camelGreet()
+getData()
